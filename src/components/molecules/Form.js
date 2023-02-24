@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CryptoJS from "crypto-js";
+import styled from "styled-components";
 import { Label } from "../atoms/label/Label";
 import { Input } from "../atoms/input/Input";
 import { Textarea } from "../atoms/textarea/Textarea";
 import { Checkbox } from "../atoms/checkbox/Checkbox";
 import { Button } from "../atoms/button/Button";
+
+const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  font-family: sans-serif;
+  width: 80%;
+  margin-left: 150px;
+
+`;
 
 export const Form = () => {
   const [formData, setFormData] = useState({
@@ -66,7 +77,7 @@ export const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <FormContainer onSubmit={handleSubmit}>
       <Label labelFor="name" labelText="Name" isRequired />
       <Input
         type="text"
@@ -115,6 +126,7 @@ export const Form = () => {
         onChange={(e) =>
           setFormData({ ...formData, resume: e.target.files[0] })
         }
+        required
       />
 
       <Label labelFor="coverLetter" labelText="Cover Letter" isRequired />
@@ -125,6 +137,7 @@ export const Form = () => {
         onChange={(e) =>
           setFormData({ ...formData, coverLetter: e.target.files[0] })
         }
+        required
       />
 
       <Label labelFor="references" labelText="References" isRequired />
@@ -135,6 +148,7 @@ export const Form = () => {
         onChange={(e) =>
           setFormData({ ...formData, references: e.target.value })
         }
+        required
       ></Textarea>
       <Checkbox
         id="terms-and-conditions"
@@ -160,6 +174,6 @@ export const Form = () => {
       />
 
       <Button type="submit" text="Submit the form and apply!" />
-    </form>
+    </FormContainer>
   );
 };

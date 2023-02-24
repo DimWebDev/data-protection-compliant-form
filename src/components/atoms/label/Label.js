@@ -1,7 +1,13 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledLabel = styled.label`
+  font-size: 21px;
+  margin-bottom: 5px;
+`;
 
 export const Label = ({ labelFor, labelText, isRequired }) => (
-  <label htmlFor={labelFor}>
+  <StyledLabel htmlFor={labelFor}>
     {labelText} {isRequired && <span>*</span>}
-  </label>
+  </StyledLabel>
 );

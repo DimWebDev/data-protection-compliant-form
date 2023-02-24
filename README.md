@@ -1,3 +1,13 @@
+# Descritpion of this Repository
+
+In creating this form, I aimed to provide a practical example of how GDPR obligations could be technically implemented in the front-end layer of a web application. To ensure compliance with GDPR, particularly the principles of data protection by design and by default, I have implemented AES encryption algorithm to encrypt the sensitive data, and I saved the secret key used for encryption as an environmental variable. I also included a consent checkbox, requiring users to agree to the terms and conditions before submitting the form.
+
+In order to follow best practices during web development, I saved the secret key used for encryption as an environmental variable and ignored it in .gitignore. This provides an extra layer of security, ensuring the key remains secure and is not accidentally committed to a public repository.
+
+Furthermore, I have implemented an additional layer of security by sending the data to the server using HTTPS. This ensures that the data is protected from unauthorized access during transmission.
+
+Overall, this form is an example of how web developers can implement GDPR compliance in the front-end layer of a web application.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

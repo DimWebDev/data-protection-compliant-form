@@ -8,6 +8,7 @@ import { Textarea } from "../atoms/textarea/Textarea";
 import { Checkbox } from "../atoms/checkbox/Checkbox";
 import { Button } from "../atoms/button/Button";
 
+// Define a styled form container using styled-components
 const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
@@ -15,10 +16,11 @@ const FormContainer = styled.form`
   font-family: sans-serif;
   width: 80%;
   margin-left: 150px;
-
 `;
 
+// Define the main form component
 export const Form = () => {
+  // Define the initial form data as a state object
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,17 +31,19 @@ export const Form = () => {
     references: "",
   });
 
+  // Handle the form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!formData.agreedToTerms || !formData.consentToDataProcessing) {
+      // Display an alert if the user hasn't agreed to the terms and conditions or consented to data processing
       alert(
         "Please confirm that you have read and agree to the terms and conditions and give consent for processing of your personal data."
       );
       return;
     }
 
-    // Encrypt the sensitive data before sending it to the server
+    // Encrypt the sensitive form data using CryptoJS and the secret key stored in an environment variable
     const encryptedFormData = {
       name: CryptoJS.AES.encrypt(
         formData.name,
@@ -63,7 +67,7 @@ export const Form = () => {
       ).toString(),
     };
 
-    // Send the encrypted data to the server
+    // Send the encrypted form data to the server using Axios
     axios
       .post("https://jsonplaceholder.typicode.com/posts", encryptedFormData)
       .then((response) => {
@@ -71,7 +75,7 @@ export const Form = () => {
         console.log("Response:", response);
       })
       .catch((error) => {
-        // Handle any errors
+        // Handle any errors that occur during the POST request
         console.error("Error:", error);
       });
   };
@@ -87,7 +91,6 @@ export const Form = () => {
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         required
       />
-
       <Label labelFor="email" labelText="Email" isRequired />
       <Input
         type="email"
@@ -97,7 +100,6 @@ export const Form = () => {
         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         required
       />
-
       <Label labelFor="phone" labelText="Phone" isRequired />
       <Input
         type="tel"
@@ -107,7 +109,6 @@ export const Form = () => {
         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
         required
       />
-
       <Label labelFor="address" labelText="Address" isRequired />
       <Input
         type="textarea"
@@ -117,7 +118,6 @@ export const Form = () => {
         onChange={(e) => setFormData({ ...formData, address: e.target.value })}
         required
       />
-
       <Label labelFor="resume" labelText="Resume" isRequired />
       <Input
         type="file"
@@ -128,7 +128,6 @@ export const Form = () => {
         }
         required
       />
-
       <Label labelFor="coverLetter" labelText="Cover Letter" isRequired />
       <Input
         type="file"
@@ -139,7 +138,6 @@ export const Form = () => {
         }
         required
       />
-
       <Label labelFor="references" labelText="References" isRequired />
       <Textarea
         id="references"

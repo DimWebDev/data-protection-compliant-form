@@ -8,6 +8,20 @@ Furthermore, I have implemented an additional layer of security by sending the d
 
 Overall, this form is an example of how web developers can implement GDPR compliance in the front-end layer of a web application.
 
+There are a few more things that can be done in the front-end layer to further enhance the GDPR compliance of the application:
+
+1. Implement data minimization: Data minimization is the principle of collecting and processing only the minimum amount of data necessary for a specific purpose. In the context of a job application form, this means collecting only the data that is strictly necessary for assessing the suitability of the applicant. Any additional data that is not relevant for this purpose should not be collected.
+
+2. Implement data retention policies: Data retention policies define how long data will be retained and when it will be deleted. This is important because keeping data longer than necessary can pose a risk to the privacy of individuals. In the context of a job application form, data should be retained only as long as necessary to assess the suitability of the applicant, and then deleted.
+
+3. Implement data subject access requests: Data subject access requests allow individuals to request access to their personal data and to have it corrected, deleted, or transferred. In the context of a job application form, this means providing applicants with an easy way to access their personal data and to request changes or deletion.
+
+These are just a few additional measures that can be taken to further enhance the GDPR compliance of the application in the front-end layer.
+
+# Limitations of GDPR Compliance in the FE layer of a web app
+
+While implementing GDPR compliance in the front-end layer of a web application is an essential step, it is important to note that it is not sufficient on its own. There are limitations to what can be achieved in the front-end layer, as the back-end is responsible for the bulk of the processing and storage of personal data. Therefore, it is important to ensure that the back-end is also designed and developed in a way that is compliant with GDPR. This includes implementing measures such as data minimization, data retention policies, and secure storage and processing of personal data. Additionally, organizations must ensure that they have a comprehensive privacy policy in place that outlines how personal data is collected, used, and stored. By taking a holistic approach to GDPR compliance that includes both front-end and back-end measures, organizations can better protect the privacy and data of their users.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

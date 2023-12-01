@@ -26,6 +26,12 @@ While implementing GDPR compliance in the front-end layer of a web application i
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Prerequisites
+
+Before running this application, ensure that you have the following installed:
+- Node.js (v18.12.1)
+- npm (v8.19.2)
+
 ## Available Scripts
 
 Before running the application, install the necessary dependencies:

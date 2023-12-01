@@ -35,7 +35,7 @@ Before running this application, ensure that you have the following installed:
 # Setting Up the Environment
 
 To run this repository, you'll need to set up an environment variable in a .env file. Create a .env file in the root directory of the project and add the following line:
-- REACT_APP_SECRET_KEY=your_secret_key_here
+### REACT_APP_SECRET_KEY=your_secret_key_here
 Replace your_secret_key_here with your actual encryption key. This key is essential for the application's encryption functionalities.
 
 ## Available Scripts

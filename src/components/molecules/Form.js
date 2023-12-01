@@ -67,6 +67,13 @@ export const Form = () => {
       ).toString(),
     };
 
+    // Log the encrypted values in console, to check that the encryption works
+    console.log("Encrypted Name:", encryptedFormData.name);
+    console.log("Encrypted Email:", encryptedFormData.email);
+    console.log("Encrypted Phone:", encryptedFormData.phone);
+    console.log("Encrypted Address:", encryptedFormData.address);
+    console.log("Encrypted References:", encryptedFormData.references);
+
     // Send the encrypted form data to the server using Axios
     axios
       .post("https://jsonplaceholder.typicode.com/posts", encryptedFormData)

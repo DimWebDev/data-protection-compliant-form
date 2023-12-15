@@ -60,4 +60,4 @@ You may also see any lint errors in the console.
 # Further Resources 
 For a more comprehensive understanding of GDPR compliance in web development, I invite you to explore my in-depth article: "Mastering GDPR Compliance in Web Development: Essential Guide for Front-End Developers." This guide provides extensive insights and practical strategies to navigate GDPR's legal landscape in web development. Whether you're new to GDPR or looking to deepen your knowledge, this article serves as an invaluable resource.
 
-Read the full article here: https://legal-engineering-lab.com/mastering-gdpr-compliance-in-web-development-essential-guide-for-front-end-developers/
+Read the full article here: https://dimitrios-liasis.com/mastering-gdpr-compliance-in-web-development-essential-guide-for-front-end-developers/
